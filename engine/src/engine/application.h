@@ -6,6 +6,7 @@
  */
 #pragma once
 #include"engine/core.h"
+#include"engine/event/event.h"
 namespace engine
 {
     class ENGINE_API Application

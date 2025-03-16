@@ -1,0 +1,1 @@
+xcopy /Y ".\\bin\\Debug-windows-x86_64\\engine\\engine.dll" ".\\bin\\Debug-windows-x86_64\\sandbox\\"

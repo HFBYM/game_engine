@@ -7,5 +7,6 @@
 #pragma once
 #include "engine/core.h"
 #include "engine/application.h"
+#include "engine/log.h"
 // to be defined in client
 #include "engine/entryPoint.h"

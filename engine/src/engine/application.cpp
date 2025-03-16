@@ -5,14 +5,18 @@
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
 #include "engine/application.h"
+#include "engine/log.h"
+#include"engine/event/applicationEvent.h"
 namespace engine
 {
     Application::Application() {}
     Application::~Application() {}
     void Application::run()
     {
+        engine::WindowResizeEvent event(1280, 720);
+        EG_WARN(event.toString());
         while (true)
         {
         }
     }
-}
+} // namespace engine

@@ -1,7 +1,11 @@
 #directory
 .vs/
+.vscode/
 bin/
 bin-int/
 
 #file
 *.user
+*.sln
+*.filters
+*.vcxproj
