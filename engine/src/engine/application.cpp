@@ -4,6 +4,7 @@
  * @date 2025-03-15
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
+#include "eg_pch.h"
 #include "engine/application.h"
 #include "engine/log.h"
 #include"engine/event/applicationEvent.h"

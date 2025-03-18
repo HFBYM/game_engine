@@ -5,8 +5,7 @@
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
 #pragma once
-#include <string>
-#include <functional>
+#include "eg_pch.h"
 #include "engine/core.h"
 //TODO(Clare): optimization events
 namespace engine

@@ -5,8 +5,8 @@
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
 #pragma once
+#include "eg_pch.h"
 #include <spdlog/spdlog.h>
-#include <memory>
 #include "engine/core.h"
 namespace engine
 {

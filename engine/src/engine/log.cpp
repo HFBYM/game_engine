@@ -4,10 +4,10 @@
  * @date 2025-03-15
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
+#include "eg_pch.h"
 #include "engine/log.h"
 #include<spdlog/sinks/stdout_color_sinks.h>
 #include<spdlog/fmt/ostr.h>
-#include<memory>
 namespace engine
 {
     std::shared_ptr<spdlog::logger> Log::s_core_logger;

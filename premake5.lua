@@ -11,6 +11,8 @@ project "engine"
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
     files{"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp",}
     includedirs{"%{prj.name}/vendor/spdlog/include", "%{prj.name}/src"}
+    pchheader "eg_pch.h"
+    pchsource "%{prj.name}/src/eg_pch.cpp"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"

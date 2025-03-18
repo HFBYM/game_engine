@@ -5,8 +5,7 @@
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
 #pragma once
-#include <sstream>
-#include <string>
+#include "eg_pch.h"
 #include "engine/event/event.h"
 namespace engine
 {
