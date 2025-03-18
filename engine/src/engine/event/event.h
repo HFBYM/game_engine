@@ -84,4 +84,10 @@ namespace engine
     private:
         Event &m_event;
     };
+
+    inline std::ostream &operator<<(std::ostream &os, const Event &e)
+    {
+        return os << e.toString();
+    }
+
 } // namespace engine
