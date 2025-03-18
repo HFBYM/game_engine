@@ -2,15 +2,18 @@ workspace "game_engine"
     architecture "x64"
     configurations { "Debug", "Release", "Dist" }
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-
+IncludeDir = {}
+IncludeDir["GLFW"] = "engine/vendor/glfw/include"
+include "engine/vendor/glfw"
 project "engine"
     location "engine"
     kind "SharedLib"
     language "C++"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-    files{"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp",}
-    includedirs{"%{prj.name}/vendor/spdlog/include", "%{prj.name}/src"}
+    files{"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp", "%{IncludeDir.GLFW}"}
+    links{"glfw", "opengl32.lib"}
+    includedirs{"%{prj.name}/vendor/spdlog/include", "%{prj.name}/src", "%{IncludeDir.GLFW}"}
     pchheader "eg_pch.h"
     pchsource "%{prj.name}/src/eg_pch.cpp"
     filter "system:windows"

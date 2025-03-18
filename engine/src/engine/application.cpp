@@ -5,19 +5,23 @@
  * @copyright Copyright (c) 2025 by Clare, All Rights Reserved.
  */
 #include "eg_pch.h"
+#include<GLFW/glfw3.h>
 #include "engine/application.h"
-#include "engine/log.h"
 #include"engine/event/applicationEvent.h"
 namespace engine
 {
-    Application::Application() {}
+    Application::Application()
+    {
+        m_window = std::unique_ptr<Window>(Window::create(WindowProps()));
+    }
     Application::~Application() {}
     void Application::run()
     {
-        engine::WindowResizeEvent event(1280, 720);
-        EG_WARN(event.toString());
-        while (true)
+        while (m_running)
         {
+            glClearColor(1, 0, 1, 1);
+            glClear(GL_COLOR_BUFFER_BIT);
+            m_window->onUpdate();
         }
     }
 } // namespace engine
