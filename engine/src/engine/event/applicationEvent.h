@@ -59,9 +59,4 @@ namespace engine
         EVENT_CLASS_TYPE(AppRender)
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
-
-    // inline std::ostream& operator<<(std::ostream& os, const Event& e)
-    // {
-    //     return os << e.toString();
-    // }
 } // namespace engine

@@ -8,6 +8,8 @@
 #include "engine/core.h"
 #include "engine/event/event.h"
 #include "engine/window.h"
+#include "engine/event/applicationEvent.h"
+#include "engine/layerStack.h"
 namespace engine
 {
     class ENGINE_API Application
@@ -17,10 +19,14 @@ namespace engine
         virtual ~Application();
         void run();
         void onEvent(Event &e);
+        void pushLayer(Layer *layer);
+        void pushOverlay(Layer *layer);
 
     private:
+        bool onWindowClose(WindowCloseEvent &e);
         std::unique_ptr<Window> m_window;
         bool m_running = true;
+        LayerStack m_layerStack;
     };
 
     // to be defined in client
